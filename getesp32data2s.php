@@ -17,7 +17,7 @@ while ($socket = stream_socket_accept($conn)) {
         parse_str($pkt); //Om - get $id, $ts and $val parts of message from client
     }
     fclose($socket);
-    $query = "INSERT INTO ecgdata (`Id`, `Timestamp`,`Value`) 
+    $query = "INSERT INTO heroku_7dd6781232a16b8.ecgdata (`Id`, `Timestamp`,`Value`) 
         VALUES ($id, $ts,$val)"; 
     /*$query = "INSERT INTO patientdata (`Id`, `Systolic`, `Diastolic`, `Sugar`, `Temp`) 
         VALUES ($id, $sys, $dia, $sugar, $temp);";  */
